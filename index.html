@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--creative project 3 curation-->
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Creative Project 3</title>
+    <!--<link rel="stylesheet" href="styles.css">-->
+</head>
+
+<body>
+    <div class="header">
+
+        <h1>What's for Dinner?</h1>
+
+        <p>
+            Not sure what to make? Enter ingredients you have and we'll give you some suggestions!
+        </p>
+    </div>
+
+    <div id="app">
+
+        <input type="text" v-model="value" v-on:keyup.enter="recipeSearch" placeholder="i.e. chicken, cheese, etc.">
+        <button v-on:click="recipeSearch">Search</button>
+
+        <div id="results">
+            <div v-for="recipe in f2f.recipes">
+                <div id="singleRecipe">
+                    <h3> {{recipe.title}}</h3>
+
+                    <a v-bind:href=recipe.source_url target="_blank"> <img src={{recipe.image_url}} width="80%" height="80%"></a>
+                     <!--width="300" height="250"-->
+
+                    <p>
+                        <a v-bind:href=recipe.publisher_url target="_blank">More from {{recipe.publisher}}</a>
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.28/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/vue.resource/0.9.3/vue-resource.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+    <script text="type/javascript" src="script.js">
+    </script>
+
+</body>
+
+<div class="footer">
+    <a href="https://www.github.com/AddisonRitchie/creativeproject3.git"> GitHub Link</a>
+</div>
+
+</html>
