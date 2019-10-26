@@ -34,6 +34,8 @@
                     <a v-bind:href=recipe.source_url target="_blank"> <img src={{recipe.image_url}} width="80%" height="80%"></a>
                      <!--width="300" height="250"-->
 
+                      <button v-on:click="recipeDetails($event, recipe.recipe_id)" v-bind:currentRecipeID="recipe.recipe_id" >Show Ingredients</button>
+                    
                     <p>
                         <a v-bind:href=recipe.publisher_url target="_blank">More from {{recipe.publisher}}</a>
                     </p>

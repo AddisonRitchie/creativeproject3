@@ -2,6 +2,9 @@
 // key for food2fork:
 //3221ea301a5e09121c7dbf246e4a33db
 
+//second key with fresh uses
+//e207512a9df514432b7e8fe1906a3e79
+
 var vm = new Vue({
     el: '#app',
     data: {
@@ -27,7 +30,7 @@ var vm = new Vue({
 
   methods: {
     recipeSearch: function(event) {
-      var searchUrl = "https://www.food2fork.com/api/search?key=3221ea301a5e09121c7dbf246e4a33db&q=" + this.value + "&format=json&nojsoncallback=1";
+      var searchUrl = "https://www.food2fork.com/api/search?key=e207512a9df514432b7e8fe1906a3e79&q=" + this.value + "&format=json&nojsoncallback=1";
 
       this.$http.get(searchUrl).then((response) => {
         this.f2f = JSON.parse(response.data);
@@ -39,8 +42,8 @@ var vm = new Vue({
 
     },
 
-    recipeDetails: function(event) {
-      var searchUrl = "https://www.food2fork.com/api/get?key=3221ea301a5e09121c7dbf246e4a33db&rId=" + this.currentRecipeID + "&format=json&nojsoncallback=1";
+    recipeDetails: function(event, variableRID) {
+      var searchUrl = "https://www.food2fork.com/api/get?key=e207512a9df514432b7e8fe1906a3e79&rId=" + variableRID + "&format=json&nojsoncallback=1";
       // Keys: 
 
       this.$http.get(searchUrl).then((response) => {
@@ -52,7 +55,7 @@ var vm = new Vue({
         console.log(JSON.stringify(this.currentRecipeIngredientsArray, null, "  "));
         alert(JSON.stringify(this.currentRecipeIngredientsArray, null, "  "));
 
-        
+
       }, (response) => {
         // error callback
       });
