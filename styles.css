@@ -6,7 +6,7 @@
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: #99e6ff;
+  background-color: #ccf3ff;
   color: black;
   text-align: center;
 }
@@ -16,7 +16,7 @@
 }
 
 .header h1 {
-    background-color: #99e6ff;
+    background-color: #ccf3ff;
     color: black;
     padding: 2%;
     padding-left: 3%;
@@ -48,6 +48,17 @@
     
 }
 
+#app button {
+    background-color: #eee;
+    border: 1px solid black;
+    border-radius: 2px;
+}
+
+#app button:hover {
+    background-color: #404040;
+    color:white;
+}
+
 /* Image Grid */
 #results {
     column-count: 3;
@@ -65,6 +76,7 @@
   margin: .5em .5em .5em;
   width: 100%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center; 
 
 }
 
@@ -78,9 +90,30 @@
     margin-right: auto;
 }
 
+/*.overlay {*/
+/*  position: absolute;*/
+/*  top: 0;*/
+/*  bottom: 0;*/
+/*  left: 0;*/
+/*  right: 0;*/
+/*  height: 100%;*/
+/*  width: 100%;*/
+/*  opacity: 0;*/
+/*  transition: .5s ease;*/
+/*  background-color: #eee;*/
+/*}*/
+
+#singleRecipe img:hover{
+    color: #eee;
+    border: solid;
+    /*opacity: %;*/
+}
+
 #singleRecipe h3 {
+    padding-top: 2%;
     text-align: center;
     font-size: medium;
+    font-weight: bold;
 }
 
 #singeleRecipe p {
@@ -90,6 +123,11 @@
 
 #singleRecipe a:link {
     text-align: center;
+    color: black;
+}
+
+#singleRecipe a:hover {
+    color:grey;
 }
 
 a:hover {
